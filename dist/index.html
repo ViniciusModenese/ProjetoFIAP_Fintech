@@ -6,18 +6,105 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
-<body class="h-dvh w-full flex">
-    <aside class="w-[20%] xl:w-[15%] h-full text-[#686868] text-[16px] xl:text-[20px] font-[inter] font-medium bg-white border-r border-gray-300">
-        <nav class="flex flex-col gap-4 h-full pt-8 items-center">
-            <a href="index.html" class="w-[70%] mb-8" ><img src="images/logo_completa.png" alt="logo" ></a>
-            <a href="" class="w-[85%] p-3 xl:p-5 rounded-lg bg-[#EEF2FF] text-[#4F46E5] font-semibold hover:text-black">Dashboard</a>
-            <a href="" class="w-[85%] p-3 xl:p-5 rounded-lg hover:bg-[#EEF2FF] hover:text-[#4F46E5] hover:font-semibold">Cartões</a>
-            <a href="" class="w-[85%] p-3 xl:p-5 rounded-lg hover:bg-[#EEF2FF] hover:text-[#4F46E5] hover:font-semibold">Meus Contatos</a>
-            <a href="" class="w-[85%] p-3 xl:p-5 rounded-lg hover:bg-[#EEF2FF] hover:text-[#4F46E5] hover:font-semibold">Investimentos</a>
+<body class="min-h-screen w-full flex flex-col xl:flex-row font-[inter] bg-[#F9FAFB]">
+    <aside class="w-full xl:w-[15%] h-auto xl:h-screen text-[#686868] text-[16px] xl:text-[20px] font-medium bg-white border-b xl:border-b-0 xl:border-r border-gray-300 transition-all">
+        <nav class="flex flex-row xl:flex-col justify-between xl:justify-start items-center gap-4 p-4 xl:p-6 xl:pt-8 w-full h-full">
+            
+            <a href="index.html" class="w-24 xl:w-[70%] xl:mb-8">
+                <img src="images/logo_completa.png" alt="logo">
+            </a>
+            
+            <div class="flex flex-row xl:flex-col gap-2 xl:gap-4 overflow-x-auto xl:overflow-visible w-full xl:w-full items-center xl:items-stretch justify-end px-2 xl:px-0">
+                <a href="" class="whitespace-nowrap p-2 xl:p-5 rounded-lg bg-[#EEF2FF] text-[#4F46E5] font-semibold text-xs xl:text-base text-center xl:text-left transition-all">
+                    Dashboard
+                </a>
+                <a href="" class="whitespace-nowrap p-2 xl:p-5 rounded-lg hover:bg-[#EEF2FF] hover:text-[#4F46E5] hover:font-semibold text-xs xl:text-base text-center xl:text-left transition-all">
+                    Cartões
+                </a>
+                <a href="" class="whitespace-nowrap p-2 xl:p-5 rounded-lg hover:bg-[#EEF2FF] hover:text-[#4F46E5] hover:font-semibold text-xs xl:text-base text-center xl:text-left transition-all">
+                    Contatos
+                </a>
+                <a href="" class="whitespace-nowrap p-2 xl:p-5 rounded-lg hover:bg-[#EEF2FF] hover:text-[#4F46E5] hover:font-semibold text-xs xl:text-base text-center xl:text-left transition-all">
+                    Investimentos
+                </a>
+            </div>
         </nav>
     </aside>
-    <main class="flex-1 h-full bg-[#F9FAFB]">
 
+    <main class="flex-1 p-4 xl:p-8 overflow-y-auto">
+        <h1 class="mt-4 xl:mt-8 mb-6 max-w-[2000px] mx-auto px-2 xl:px-4 font-bold text-xl xl:text-[32px] text-black">
+            Olá, Usuário!
+        </h1>
+        
+        <section class="w-full max-w-[2000px] mx-auto px-2 xl:px-4 grid grid-cols-1 xl:grid-cols-3 gap-4 xl:gap-6">
+            
+            <div class="w-full bg-white border border-gray-200 rounded-xl p-5 font-bold shadow-sm">
+                <h2 class="text-[#686868] text-sm xl:text-xl">Saldo Total</h2>
+                <p class="text-black text-xl xl:text-[36px] mt-2 xl:mt-4 whitespace-nowrap">R$ 50.000,00</p>
+            </div>
+
+            <div class="w-full bg-white border border-gray-200 rounded-xl p-5 font-bold shadow-sm">
+                <h2 class="text-[#686868] text-sm xl:text-xl">Investido</h2>
+                <p class="text-black text-xl xl:text-[36px] mt-2 xl:mt-4 whitespace-nowrap">R$ 85.517,83</p>
+            </div>
+
+            <div class="w-full bg-white border border-gray-200 rounded-xl p-5 font-bold shadow-sm">
+                <h2 class="text-[#686868] text-sm xl:text-xl">Fatura Atual</h2>
+                <p class="text-[#ef4444] text-xl xl:text-[36px] mt-2 xl:mt-4 whitespace-nowrap">R$ 3.489,09</p>
+            </div>
+
+            <div class="xl:col-span-3 w-full bg-white border border-gray-200 rounded-2xl p-4 xl:p-6 shadow-sm">
+                <h2 class="text-base xl:text-xl font-bold text-black mb-4">Últimas Movimentações</h2>
+                
+                <div class="w-full overflow-x-auto rounded-xl">
+                    <table class="w-full text-left border-collapse min-w-[650px]">
+                        <thead>
+                            <tr class="bg-[#F1F3F7] text-[#686868] text-xs font-bold uppercase tracking-wider">
+                                <th class="p-4 rounded-l-xl">Descrição</th>
+                                <th class="p-4">Data</th>
+                                <th class="p-4 text-right rounded-r-xl" colspan="2">Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-xs xl:text-sm font-medium text-gray-700">
+                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                                <td class="p-4">Pagamento de Aluguel</td>
+                                <td class="p-4 text-gray-500">05/04/2026</td>
+                                <td class="p-4 text-right font-bold text-red-500 whitespace-nowrap">- R$ 1.800,00</td>
+                                <td class="p-4 text-right w-36">
+                                    <button class="bg-[#4F46E5] hover:bg-[#4338CA] text-white text-[10px] xl:text-xs px-3 xl:px-4 py-1.5 xl:py-2 rounded-xl font-semibold transition-colors">Comprovante</button>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                                <td class="p-4">Depósito</td>
+                                <td class="p-4 text-gray-500">05/04/2026</td>
+                                <td class="p-4 text-right font-bold text-green-600 whitespace-nowrap">+ R$ 3.700,00</td>
+                                <td class="p-4 text-right w-36">
+                                    <button class="bg-[#4F46E5] hover:bg-[#4338CA] text-white text-[10px] xl:text-xs px-3 xl:px-4 py-1.5 xl:py-2 rounded-xl font-semibold transition-colors">Comprovante</button>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                                <td class="p-4">Transferência Recebida</td>
+                                <td class="p-4 text-gray-500">05/04/2026</td>
+                                <td class="p-4 text-right font-bold text-green-600 whitespace-nowrap">+ R$ 600,00</td>
+                                <td class="p-4 text-right w-36">
+                                    <button class="bg-[#4F46E5] hover:bg-[#4338CA] text-white text-[10px] xl:text-xs px-3 xl:px-4 py-1.5 xl:py-2 rounded-xl font-semibold transition-colors">Comprovante</button>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                                <td class="p-4">Pagamento Internet</td>
+                                <td class="p-4 text-gray-500">05/04/2026</td>
+                                <td class="p-4 text-right font-bold text-red-500 whitespace-nowrap">- R$ 240,00</td>
+                                <td class="p-4 text-right w-36">
+                                    <button class="bg-[#4F46E5] hover:bg-[#4338CA] text-white text-[10px] xl:text-xs px-3 xl:px-4 py-1.5 xl:py-2 rounded-xl font-semibold transition-colors">Comprovante</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+        </section>
     </main>
+
 </body>
 </html>
